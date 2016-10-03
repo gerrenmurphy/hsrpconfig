@@ -11,7 +11,7 @@ def gen_password(string_length=10):
     return random[0:string_length] # Return the random string.
 
 def generate_config(vlan, subnet, mask):
-	hsrpAuth = 	gen_password()
+	hsrpAuth = gen_password()
 
 	print("!!!!! SWITCH A !!!!!")
 	print("interface vlan " + vlan)
@@ -47,9 +47,6 @@ print("Switch B: IP: x.x.x.3 | HSRP Priority 90  | No preemption\n")
 
 
 vlan = input("What VLAN number is this for? ")
-subnet = input("What IP subnet? (Use x.x.x.) ")
-mask = input("What subnet mask? (Full mask, no CIDR notation) ")
+subnet = input("What IP subnet? (Use x.x.x. (ie 192.168.1. )): ")
+mask = input("What subnet mask? (Full mask, no CIDR notation): ")
 generate_config(vlan, subnet, mask)
-
-
-
