@@ -1,6 +1,8 @@
 #This will generate a pair of HSRPv2 enabled SVIs with a random password
 #for HSRP authentication using MD5
 
+#Only valid for NX-OS
+
 import uuid
 
 def gen_password(string_length=10):
